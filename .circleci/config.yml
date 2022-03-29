@@ -7,6 +7,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Check Go version
+          command: go version
+      - run:
           name: Compile for Mac
           command: GOOS=darwin GOARCH=amd64 go build -o Chapter_1-mac
       - run:
