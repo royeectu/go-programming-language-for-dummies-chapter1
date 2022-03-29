@@ -14,6 +14,7 @@ jobs:
           command: | 
             pwd
             ls -l
+            go env -w GO111MODULE=auto
             go env GO111MODULE
             GOOS=darwin GOARCH=amd64 go build -o Chapter_1-mac
       - run:
