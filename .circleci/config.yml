@@ -22,8 +22,8 @@ jobs:
           name: Complie for Linux
           command: GOOS=linux GOARCH=amd64 go build -o Chapter_1-linux
       - run:
-          name: List all bins
-          command: ls -l
+          name: List all artifacts(bins)
+          command: ls -l Chapter1*
 
 workflows:
   compile-all-os:
