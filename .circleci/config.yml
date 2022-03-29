@@ -11,7 +11,10 @@ jobs:
           command: go version
       - run:
           name: Compile for Mac
-          command: GOOS=darwin GOARCH=amd64 go build -o Chapter_1-mac
+          command: | 
+          pwd
+          ls -l
+          GOOS=darwin GOARCH=amd64 go build -o Chapter_1-mac
       - run:
           name: Complie for Windows
           command: GOOS=windows GOARCH=amd64 go build -o Chapter_1-windows.exe
