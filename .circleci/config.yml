@@ -12,9 +12,9 @@ jobs:
       - run:
           name: Compile for Mac
           command: | 
-          pwd
-          ls -l
-          GOOS=darwin GOARCH=amd64 go build -o Chapter_1-mac
+            pwd
+            ls -l
+            GOOS=darwin GOARCH=amd64 go build -o Chapter_1-mac
       - run:
           name: Complie for Windows
           command: GOOS=windows GOARCH=amd64 go build -o Chapter_1-windows.exe
