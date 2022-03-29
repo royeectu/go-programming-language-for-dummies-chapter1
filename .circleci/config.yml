@@ -11,9 +11,7 @@ jobs:
           command: go version
       - run:
           name: Compile for Mac
-          command: | 
-            pwd
-            ls -l
+          command: |
             go env -w GO111MODULE=auto
             go env GO111MODULE
             GOOS=darwin GOARCH=amd64 go build -o Chapter_1-mac
