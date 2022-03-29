@@ -10,10 +10,12 @@ jobs:
           name: Check Go version
           command: go version
       - run:
+          # related to: https://github.com/golang/go/issues/31997
+          name: Set GO111MODULE
+          command: go env -w GO111MODULE=auto
+      - run:
           name: Compile for Mac
           command: |
-            go env -w GO111MODULE=auto
-            go env GO111MODULE
             GOOS=darwin GOARCH=amd64 go build -o Chapter_1-mac
       - run:
           name: Complie for Windows
